@@ -1,0 +1,65 @@
+.bg-dimm{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0; //상하좌우 꽉차는 화면을 만들어준다.
+  background-color: rgba(#000,0.7);
+}
+
+.local-order-popup{
+  z-index:9999;
+  position: fixed;
+  bottom:0; //아래쪽 하단에 영역을 잡아준다.
+  left:0;
+  width:100%;
+  background-color: #fff;
+  padding:32px 0 40px;
+  border-radius: 15px 15px 0px 0px;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+
+  .title{
+    font-size:20px;
+    font-weight:700;
+    color:$booking-color-text1;
+  }
+
+  .type-list{
+    display:flex;
+    margin-top:32px;
+  }
+
+  .type-item{
+    flex:1; // 균등하게 분배해준다.
+
+    & + .type-item{
+      border-left:1px solid $booking-color-border1;
+    } // 인접 형제 결합자
+
+    .icon{
+      width:95px;
+      height:100px;
+    }
+
+    .desc{
+      font-size:15px;
+      margin-top:8px;
+      line-height: 1.5;
+      font-weight:600;  
+      color: $booking-color-text1;
+    }
+
+    .btn-selection{
+      display: inline-block;
+      background-color: $booking-color-bg189;
+      padding:6px 18px;
+      border-radius:28px;
+      font-size:16px;
+      color:#fff;
+      font-weight:700;
+      margin-top:10px;
+    }
+  }
+}
