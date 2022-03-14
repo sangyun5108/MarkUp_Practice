@@ -3,21 +3,24 @@
   z-index:5000;
   top:0px;
   left:0px;
-  right:0px;
+  width:100%;
   background-color: $booking-color-bg118;
 
   .place_header{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    height:$place-header-height;
 
     .title{
-      width:63%;
       font-size:20px;
+      margin-right:90px;
+      white-space: nowrap;
       color: #fff;
     }
 
     .order_list_btn{
+      white-space: nowrap;
       font-size:15px;
       color: #fff;
       font-weight:800;
@@ -26,23 +29,43 @@
   }
 
   .place_tab{
-    background-color: $booking-color-border120;
-    padding:0 8px;
+    background-color: #03b753;
+    height:$place-tab-height;
     .tab_inner{
       display: flex;
+      padding:0 8px;  
       height:45px;
       color:#fff;
+
       
       .tab{
         flex:1;
-        padding:0 12px;
+        padding:0 11px;
         display:flex;
+        justify-content: center;
         align-items: center;
+        opacity: 0.4;
+        font-weight:600;
+
+        &.is_active{
+          font-weight:700;
+          opacity: 1;
+
+          .txt::after{
+            content: '';  
+            position: absolute;
+            bottom:0;
+            left:0;
+            right:0;
+            height:2px;
+            background-color: #fff;
+          }
+        }
       }
 
       .txt{
+        position: relative;
         padding:13px 3px 12px;
-        text-align: center;
       }
     }
   }

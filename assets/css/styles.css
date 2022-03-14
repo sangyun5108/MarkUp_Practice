@@ -186,7 +186,20 @@ textarea::-webkit-outer-spin-button {
   height: 0;
   line-height: 0;
   overflow: hidden;
-  text-indent: -9999px;
+  text-indent: -9999;
+}
+
+.scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-x::-webkit-scrollbar {
+  display: none;
 }
 
 .bg-dimm {
@@ -269,7 +282,7 @@ textarea::-webkit-outer-spin-button {
   z-index: 5000;
   top: 0px;
   left: 0px;
-  right: 0px;
+  width: 100%;
   background-color: #03c75a;
 }
 
@@ -283,15 +296,18 @@ textarea::-webkit-outer-spin-button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 48px;
 }
 
 .header_area .place_header .title {
-  width: 63%;
   font-size: 20px;
+  margin-right: 90px;
+  white-space: nowrap;
   color: #fff;
 }
 
 .header_area .place_header .order_list_btn {
+  white-space: nowrap;
   font-size: 15px;
   color: #fff;
   font-weight: 800;
@@ -299,14 +315,15 @@ textarea::-webkit-outer-spin-button {
 }
 
 .header_area .place_tab {
-  background-color: rgba(3, 199, 90, 0.4);
-  padding: 0 8px;
+  background-color: #03b753;
+  height: 46px;
 }
 
 .header_area .place_tab .tab_inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 8px;
   height: 45px;
   color: #fff;
 }
@@ -315,16 +332,145 @@ textarea::-webkit-outer-spin-button {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 12px;
+  padding: 0 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.4;
+  font-weight: 600;
+}
+
+.header_area .place_tab .tab_inner .tab.is_active {
+  font-weight: 700;
+  opacity: 1;
+}
+
+.header_area .place_tab .tab_inner .tab.is_active .txt::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #fff;
+}
+
+.header_area .place_tab .tab_inner .txt {
+  position: relative;
+  padding: 13px 3px 12px;
+}
+
+.info_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 18px 20px;
+  background-color: #d9e8f0;
+}
+
+.info_main .title {
+  font-size: 18px;
+  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 39px;
 }
 
-.header_area .place_tab .tab_inner .txt {
-  padding: 13px 3px 12px;
-  text-align: center;
+.info_main .ico-n-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.info_main .tab_switch_box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 11px;
+}
+
+.info_main .tab_switch_box .tab_switch {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 8px 0px 7px;
+  height: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #cbdeed;
+}
+
+.info_main .tab_switch_box .tab_switch.is_active {
+  padding: 11px 0px 8px;
+  height: 45px;
+  margin: -3px 0px;
+  background-color: #fff;
+  border: 1px solid #000;
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.info_main .tab_switch_box .tab_switch.is_active::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: rotate(45deg) translateX(-50%);
+          transform: rotate(45deg) translateX(-50%);
+  border: 1px solid #000;
+  border-width: 0 1px 1px 0;
+  background-color: #fff;
+}
+
+.info_main .tab_switch_box .icon {
+  margin: 0px 5px 2px 0px;
+}
+
+.info_main .tab_switch_box .check_icon {
+  margin-left: 5px;
+}
+
+.info_main .notice_desc {
+  background-color: #fff;
+  margin-top: 16px;
+  padding: 13px 15px 11px;
+  font-size: 14px;
+  color: #fc4c4e;
+  font-weight: bold;
+}
+
+.info_main .notice_desc .hours {
+  color: #000;
+  font-weight: 400;
+}
+
+.info_main .notice_desc .icon {
+  margin-right: 3px;
 }
