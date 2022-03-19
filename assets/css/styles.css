@@ -605,3 +605,25 @@ textarea::-webkit-outer-spin-button {
 .recent_order_area .recent_menu_area .recent_menu_list .recent_menu_item:last-child {
   padding-right: 16px;
 }
+
+.menu_category_area {
+  padding: 10px 10px;
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.menu_category_area .menu_category_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu_category_area .menu_category_list .menu_category_item {
+  text-align: center;
+  margin-right: 15px;
+}
+
+.menu_category_area .menu_category_list .menu_category_item:last-child {
+  padding-right: 10px;
+}

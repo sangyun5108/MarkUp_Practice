@@ -1,0 +1,25 @@
+.menu_category_area{
+  padding: 10px 10px;
+  background-color: #fff;
+  position: sticky;
+
+  .menu_category_list{
+    display:flex;
+    
+    .menu_category_item{  
+      text-align: center;
+      margin-right:15px;
+      &:last-child{
+        padding-right:10px;
+      }
+      
+      &:before{
+        background-image: linear-gradient();
+      }
+
+      &.is_clicked{
+        background-color: #4E4D4E;
+      }
+    }
+  }
+}
