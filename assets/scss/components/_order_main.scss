@@ -1,0 +1,87 @@
+.main_order_area{
+  background-color: $booking-color-border151;
+  padding-top:15px;
+
+  .menu_category_area{
+    display: flex;
+    position: relative;
+    position: sticky;
+    top:93px;
+    padding:10px 0px 10px;
+    border-bottom:1px solid $booking-color-border144;
+    background-color: #fff;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      width: 15px;
+      height:100%;
+      pointer-events: none;
+      background-image:linear-gradient(to right,#fff 35%,rgba(255,255,255,0));
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top:0;
+      right:0;
+      width: 15px;
+      height:100%;
+      pointer-events: none;
+      background-image:linear-gradient(to right,rgba(255,255,255,0),#fff 65%);
+      z-index: 1;
+    }
+
+    .menu_category_list{
+      display: flex;
+      .menu_category_item{  
+        display: flex;
+        margin-right:15px;
+        justify-content: center;
+        align-items: center;
+
+        &.is_clicked {
+          border-radius: 30px;
+          padding: 5px 12px;
+          background-color: #000;
+          color: #fff;  
+          font-weight:700;
+          font-size:16px;
+        }
+  
+        &:first-child {
+          margin-left: 15px;
+        }
+  
+        &:last-child {
+          padding-right:15px;
+          margin-right:0px;
+        }
+      }
+    }
+    }
+
+    .order_list_filter {
+
+      background-color: #fff;
+      display: flex;
+      padding:20px 18px 0px 0px;
+      justify-content: flex-end;
+
+      .checkbox_sold_out{
+        
+        display: flex;
+        align-items: center;
+
+        .check_icon {
+          width:22px;
+          margin-right:6px;
+        }
+      }
+      
+      }
+    }
