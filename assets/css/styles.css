@@ -487,131 +487,6 @@ textarea::-webkit-outer-spin-button {
   color: #000;
 }
 
-.recent_order_area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px 18px;
-}
-
-.recent_order_area .recent_menu_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #fff;
-}
-
-.recent_order_area .recent_menu_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.recent_order_area .recent_menu_item .recent_menu_image {
-  height: 80px;
-}
-
-.recent_order_area .recent_order_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 8px;
-  font-size: 12px;
-  background-color: #fff;
-  border-right: 1px solid #f2f2f2;
-  line-height: 1.42;
-}
-
-.recent_order_area .recent_order_title .ico-clock {
-  margin-bottom: 5px;
-}
-
-.recent_order_area .recent_order_title .recent_order_content {
-  text-align: center;
-}
-
-.recent_order_area .recent_menu_area {
-  background-color: #fff;
-}
-
-.recent_order_area .recent_menu_area .recent_menu_list .recent_menu_item {
-  width: 80px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  padding: 10px 0px 10px 16px;
-  position: relative;
-}
-
-.recent_order_area .recent_menu_area .recent_menu_list .recent_menu_item .recent_menu_image {
-  border-radius: 100%;
-}
-
-.recent_order_area .recent_menu_area .recent_menu_list .recent_menu_item .menu_title {
-  font-size: 14px;
-  text-align: end;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.recent_order_area .recent_menu_area .recent_menu_list .recent_menu_item .ico_cart {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  padding: 3px;
-  background-color: #F7FAF5;
-  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border-radius: 100%;
-  top: 65px;
-  left: 80px;
-}
-
-.recent_order_area .recent_menu_area .recent_menu_list .recent_menu_item .pop_item {
-  position: absolute;
-  font-size: 10px;
-  color: #fff;
-  background-color: #E172AE;
-  border-radius: 15px;
-  font-weight: 600;
-  padding: 2px 5px 2px 5px;
-}
-
-.recent_order_area .recent_menu_area .recent_menu_list .recent_menu_item .menu_price {
-  text-align: end;
-  color: red;
-  font-weight: 600;
-  font-size: 11px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.recent_order_area .recent_menu_area .recent_menu_list .recent_menu_item.is_orderd {
-  padding-right: 16px;
-  border: 1px solid #f2f2f2;
-}
-
-.recent_order_area .recent_menu_area .recent_menu_list .recent_menu_item:last-child {
-  padding-right: 16px;
-}
-
 .main_order_area {
   background-color: #f4f7f9;
   padding-top: 15px;
@@ -987,4 +862,46 @@ textarea::-webkit-outer-spin-button {
   width: 2px;
   height: 8px;
   background-color: #666;
+}
+
+.menu_detail_area {
+  background-color: #fff;
+  padding-top: 93px;
+}
+
+.menu_detail_area .menu_img {
+  position: relative;
+  height: 300px;
+  background-color: #f8fafb;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0);
+}
+
+.menu_detail_area .menu_img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.menu_detail_area .menu_img::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+  z-index: 1;
+  opacity: 0.15;
 }

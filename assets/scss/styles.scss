@@ -5,10 +5,16 @@
 @import "./base/reset";
 @import "./base/preset";
 
-@import "./components/order_type";
+// menu
+@import "./components/menu/order_type.scss";
 @import "./components/header_area";
-@import "./components/order_info";
-@import "./components/recent_order";
-@import "./components/menu_category";
-@import "./components/menu_list_area";
-@import "./components/go_to_top";
+@import "./components/menu/order_info.scss";
+@import "./components/menu/menu_category.scss";
+@import "./components/menu/menu_list_area.scss";
+@import "./components/menu/go_to_top.scss";
+
+// detail
+
+@import "./components/detail/item_detail.scss";
+@import "./components/detail/item_review.scss";
+@import "./components/detail/option_pop_up";
